@@ -76,7 +76,16 @@ main {
 .share-group {
     display: flex;
     align-items: center;
-    margin-right: 3rem;
+    justify-content: space-between;
+    margin-right: 1.8rem;
+}
+
+.share-group a {
+    margin-right: 1.5rem;
+}
+
+.share-group a img {
+    height: 1.7rem;
 }
 
 .popup p {
