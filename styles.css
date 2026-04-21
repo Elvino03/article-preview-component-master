@@ -14,6 +14,7 @@ main {
     width: 25rem;
     background-color: white;
     border-radius: 10px;
+    box-shadow: hsl(213, 14%, 88%) 5px 5px 3px;
 }
 
 .image {
@@ -172,4 +173,113 @@ footer {
 
 footer a { 
     color: hsl(228, 45%, 44%); 
+}
+
+@media (min-width: 768px) { 
+    main {
+        width: 43rem;
+        display: flex;
+    }
+
+    .image {
+        width: 17rem;
+        overflow: hidden;
+        border-radius: 10px 0 0 10px;
+    }
+
+    .image img {
+        width: 21rem;
+        height: 100%;
+        border-radius: 10px 10px 0 0;
+        object-fit: fill;
+    }
+
+    .non-image {
+        width: 27rem;
+        position: relative;
+    }
+
+    .main p {
+        font-size: 0.8rem;
+    }
+
+    .info {
+        padding-top: 0.2rem;
+        padding-bottom: 0;
+    }
+
+    .info img {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .username {
+        margin-right: 9.5rem;
+    }
+
+    button {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-top: 0.3rem;
+    }
+
+    .info-text button img {
+        width: 0.7rem;
+    }
+
+    .popup {
+        position: absolute;
+        bottom: 5rem;
+        right: -4.3rem;
+        border-radius: 7px;
+        height: 2rem;
+        padding-top: 0.6rem;
+        padding-bottom: 0.6rem;
+        padding-right: 0.8rem;
+        padding-left: 2rem;
+        z-index: 10;
+    }
+
+    .popup p {
+        font-size: 0.8rem;
+        margin-top: 0.2rem;
+        margin-bottom: 0.2rem;
+        margin-right: 1rem;
+    }
+
+    .popup button {
+        display: none;
+    }
+
+    .popup .share-group a {
+        margin-right: 1rem;
+    }
+
+    .share-group {
+        margin-right: 0;
+    }
+
+    .popup .share-group a img {
+        height: 1.5rem;
+        width: 1.5rem;
+        object-fit: contain;
+    }
+
+    .popup::after {
+        content: "";
+        position: absolute;
+        bottom: -8px;
+        left: 50%;
+        z-index: 11;
+        transform: translateX(-50%);
+        transform: translateY(50%);
+
+        border-width: 8px;
+        border-style: solid;
+        border-color: hsl(217, 19%, 35%) transparent transparent transparent;
+    }
+
+    footer {
+        width: 30rem;
+    }
 }
